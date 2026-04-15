@@ -3,866 +3,179 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>داسكيدا | Graphic Designer</title>
-  <meta name="description" content="داسكيدا - مصمم جرافيك. شعارات، سوشيال ميديا، هوية بصرية، وتصميمات إبداعية." />
-  <meta name="theme-color" content="#0f172a" />
-
-  <style>
-    :root {
-      --bg: #0b1220;
-      --bg-soft: #111a2d;
-      --card: rgba(255, 255, 255, 0.06);
-      --stroke: rgba(255, 255, 255, 0.1);
-      --text: #f8fafc;
-      --muted: #cbd5e1;
-      --accent: #7c9cff;
-      --accent-2: #8b5cf6;
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
-      --radius: 22px;
-      --max: 1180px;
-    }
-
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Tahoma, Arial, sans-serif;
-      background:
-        radial-gradient(circle at top right, rgba(124, 156, 255, 0.18), transparent 22%),
-        radial-gradient(circle at left center, rgba(139, 92, 246, 0.12), transparent 18%),
-        linear-gradient(180deg, #09111f 0%, #0b1220 100%);
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(92%, var(--max));
-      margin: auto;
-    }
-
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(14px);
-      background: rgba(11, 18, 32, 0.6);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 74px;
-      gap: 18px;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-    }
-
-    .logo span {
-      color: var(--accent);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      font-size: 15px;
-      transition: 0.25s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--text);
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      min-height: 48px;
-      padding: 0 22px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      font-weight: 700;
-      transition: 0.25s ease;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: white;
-      box-shadow: 0 12px 30px rgba(124, 156, 255, 0.25);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      opacity: 0.95;
-    }
-
-    .btn-secondary {
-      border-color: var(--stroke);
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--text);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.07);
-    }
-
-    .hero {
-      padding: 90px 0 48px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 28px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      border: 1px solid var(--stroke);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.04);
-      color: #dbeafe;
-      font-size: 14px;
-      margin-bottom: 18px;
-    }
-
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #60a5fa;
-      box-shadow: 0 0 0 6px rgba(96, 165, 250, 0.12);
-    }
-
-    h1 {
-      font-size: clamp(34px, 5vw, 62px);
-      line-height: 1.15;
-      margin: 0 0 18px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: var(--muted);
-      margin: 0 0 28px;
-      max-width: 720px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 28px;
-    }
-
-    .stats {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .stat {
-      min-width: 150px;
-      padding: 16px 18px;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--stroke);
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 24px;
-      margin-bottom: 4px;
-    }
-
-    .stat span {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .hero-card {
-      position: relative;
-      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
-      border: 1px solid var(--stroke);
-      border-radius: 28px;
-      padding: 26px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: auto -40px -40px auto;
-      width: 170px;
-      height: 170px;
-      background: radial-gradient(circle, rgba(124,156,255,0.45), transparent 65%);
-      filter: blur(8px);
-    }
-
-    .mini-label {
-      display: inline-block;
-      font-size: 13px;
-      color: #bfdbfe;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: rgba(96, 165, 250, 0.12);
-      margin-bottom: 14px;
-    }
-
-    .preview-box {
-      border-radius: 20px;
-      overflow: hidden;
-      background: #e2e8f0;
-      min-height: 320px;
-      display: grid;
-      place-items: center;
-      color: #334155;
-      padding: 22px;
-      text-align: center;
-    }
-
-    .preview-box .preview-inner {
-      width: 100%;
-      max-width: 360px;
-      background: white;
-      border-radius: 22px;
-      padding: 20px;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
-    }
-
-    .preview-tag {
-      display: inline-block;
-      background: #eff6ff;
-      color: #2563eb;
-      font-size: 13px;
-      padding: 7px 12px;
-      border-radius: 999px;
-      margin-bottom: 14px;
-    }
-
-    .preview-title {
-      font-size: 24px;
-      font-weight: bold;
-      color: #0f172a;
-      margin-bottom: 10px;
-    }
-
-    .preview-text {
-      color: #475569;
-      font-size: 14px;
-      margin-bottom: 18px;
-    }
-
-    .preview-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-
-    .preview-item {
-      background: #f8fafc;
-      border-radius: 14px;
-      padding: 14px 10px;
-      font-size: 13px;
-      color: #334155;
-      border: 1px solid #e2e8f0;
-    }
-
-    section {
-      padding: 42px 0;
-    }
-
-    .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 24px;
-      flex-wrap: wrap;
-    }
-
-    .section-head h2 {
-      margin: 0;
-      font-size: 30px;
-    }
-
-    .section-head p {
-      margin: 0;
-      color: var(--muted);
-      max-width: 650px;
-    }
-
-    .services-grid,
-    .work-grid,
-    .steps-grid {
-      display: grid;
-      gap: 18px;
-    }
-
-    .services-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .work-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .steps-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--stroke);
-      border-radius: var(--radius);
-      padding: 24px;
-      box-shadow: var(--shadow);
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 20px;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 16px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 16px;
-      background: linear-gradient(135deg, rgba(124, 156, 255, 0.2), rgba(139, 92, 246, 0.18));
-      border: 1px solid rgba(255,255,255,0.1);
-      font-size: 22px;
-    }
-
-    .work-card {
-      overflow: hidden;
-      padding: 0;
-    }
-
-    .work-cover {
-      height: 220px;
-      display: grid;
-      place-items: center;
-      background:
-        linear-gradient(135deg, rgba(124,156,255,0.18), rgba(139,92,246,0.2)),
-        #131d31;
-      border-bottom: 1px solid var(--stroke);
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-    }
-
-    .work-content {
-      padding: 20px;
-    }
-
-    .work-content p {
-      margin: 8px 0 16px;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .chip-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .chip {
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid var(--stroke);
-      font-size: 13px;
-      color: #dbeafe;
-    }
-
-    .about {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 22px;
-      align-items: stretch;
-    }
-
-    .about-box {
-      min-height: 100%;
-    }
-
-    .about-visual {
-      min-height: 320px;
-      border-radius: 28px;
-      background:
-        radial-gradient(circle at 20% 20%, rgba(124,156,255,0.28), transparent 20%),
-        radial-gradient(circle at 80% 80%, rgba(139,92,246,0.24), transparent 24%),
-        linear-gradient(135deg, #131e34, #0f172a);
-      border: 1px solid var(--stroke);
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 24px;
-    }
-
-    .about-visual strong {
-      font-size: 34px;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .about-visual span {
-      color: var(--muted);
-    }
-
-    .about-list {
-      display: grid;
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .about-list div {
-      padding: 16px 18px;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--stroke);
-      color: var(--muted);
-    }
-
-    .cta {
-      padding: 28px;
-      border-radius: 28px;
-      background:
-        linear-gradient(135deg, rgba(124,156,255,0.18), rgba(139,92,246,0.16)),
-        rgba(255,255,255,0.04);
-      border: 1px solid var(--stroke);
-      box-shadow: var(--shadow);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .cta h3 {
-      font-size: 28px;
-      margin: 0 0 8px;
-    }
-
-    .cta p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .contact-item {
-      padding: 20px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--stroke);
-    }
-
-    .contact-item small {
-      display: block;
-      color: #93c5fd;
-      margin-bottom: 6px;
-      font-size: 13px;
-    }
-
-    .contact-item strong {
-      font-size: 18px;
-      word-break: break-word;
-    }
-
-    footer {
-      padding: 30px 0 50px;
-      text-align: center;
-      color: #94a3b8;
-      font-size: 14px;
-    }
-
-    @media (max-width: 980px) {
-      .hero-grid,
-      .about,
-      .services-grid,
-      .work-grid,
-      .steps-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .nav-inner {
-        padding: 12px 0;
-      }
-
-      .nav-links {
-        gap: 14px;
-      }
-
-      .hero {
-        padding-top: 54px;
-      }
-
-      .section-head h2 {
-        font-size: 26px;
-      }
-
-      .cta h3 {
-        font-size: 24px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      h1 {
-        font-size: 34px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .hero-actions {
-        display: grid;
-        grid-template-columns: 1fr;
-      }
-
-      .stats {
-        display: grid;
-        grid-template-columns: 1fr;
-      }
-
-      .nav-links {
-        display: none;
-      }
-    }
-  </style>
+  <title>Daskeda | Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<body>
+<body class="home">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Daskeda Logo">
+      </a>
 
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a href="#home" class="logo">دا<span>سكيدا</span></a>
+      <div class="header-side">
+        <nav class="nav">
+          <a href="index.html" class="active" data-i18n="navHome">الرئيسية</a>
+          <a href="about.html" data-i18n="navAbout">عنّي</a>
+          <a href="work.html" data-i18n="navWork">الأعمال</a>
+          <a href="contact.html" data-i18n="navContact">تواصل</a>
+        </nav>
 
-      <div class="nav-links">
-        <a href="#services">الخدمات</a>
-        <a href="#work">الأعمال</a>
-        <a href="#about">عنّي</a>
-        <a href="#contact">تواصل</a>
-      </div>
-
-      <a href="#contact" class="btn btn-secondary">ابدأ مشروعك</a>
-    </div>
-  </nav>
-
-  <header class="hero" id="home">
-    <div class="container hero-grid">
-      <div>
-        <div class="eyebrow">
-          <span class="dot"></span>
-          مصمم جرافيك | هوية بصرية | سوشيال ميديا
-        </div>
-
-        <h1>
-          أصمّم أعمال تلفت النظر
-          <br>
-          وتسيب انطباع واضح
-        </h1>
-
-        <p>
-          أنا داسكيدا، مصمم جرافيك أقدّم تصميمات عصرية ومرتبة تساعد البراند يظهر بشكل أقوى،
-          سواء في الشعارات، السوشيال ميديا، أو الهوية البصرية.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#work" class="btn btn-primary">شوف أعمالي</a>
-          <a href="#contact" class="btn btn-secondary">تواصل معي</a>
-        </div>
-
-        <div class="stats">
-          <div class="stat">
-            <strong>+50</strong>
-            <span>تصميم قابل للتخصيص</span>
-          </div>
-          <div class="stat">
-            <strong>3</strong>
-            <span>خدمات أساسية</span>
-          </div>
-          <div class="stat">
-            <strong>100%</strong>
-            <span>تصميم يركز على الشكل والوضوح</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-card">
-        <div class="mini-label">واجهة تعريفية سريعة</div>
-
-        <div class="preview-box">
-          <div class="preview-inner">
-            <div class="preview-tag">Daskeda Studio</div>
-            <div class="preview-title">Creative Visual Design</div>
-            <div class="preview-text">
-              تصميمات مرتبة، حديثة، ومناسبة لعرضك بشكل احترافي.
-            </div>
-
-            <div class="preview-grid">
-              <div class="preview-item">Logo Design</div>
-              <div class="preview-item">Brand Identity</div>
-              <div class="preview-item">Social Media</div>
-              <div class="preview-item">Creative Layouts</div>
-            </div>
-          </div>
-        </div>
+        <button class="lang-btn" id="langToggle">EN</button>
       </div>
     </div>
   </header>
 
-  <section id="services">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <h2>الخدمات</h2>
-        </div>
-        <p>
-          شغل مرتب ومباشر، مناسب للأفراد والبراندات اللي محتاجة شكل أقوى ووجود بصري أوضح.
-        </p>
-      </div>
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title" data-i18n="homeHeroTitle">Shaping Vision into Reality</h1>
 
-      <div class="services-grid">
-        <div class="card">
-          <div class="icon">✦</div>
-          <h3>تصميم شعارات</h3>
-          <p>
-            شعارات بسيطة أو عصرية تعبر عن نشاطك وتطلع بشكل واضح وقابل للاستخدام على كل المنصات.
+      <p data-i18n="homeHeroText">
+        تصميمات حديثة، جريئة، ومرتبة بصريًا تساعد البراندات والأفراد يظهروا بشكل أقوى وأكثر احترافية.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="work.html" class="btn primary" data-i18n="heroBtn1">شوف أعمالي</a>
+        <a href="contact.html" class="btn" data-i18n="heroBtn2">ابدأ مشروعك</a>
+      </div>
+    </div>
+
+    <div class="scroll-down">↓</div>
+  </section>
+
+  <div class="content-wrap">
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="homeSectionTitle">نبذة سريعة</h2>
+          <p data-i18n="homeSectionText">
+            أقدّم حلول تصميم تساعد البراند أو المشروع يظهر بشكل واضح وحديث من خلال الهوية البصرية، الشعارات، وتصميمات السوشيال ميديا.
           </p>
         </div>
 
-        <div class="card">
-          <div class="icon">◉</div>
-          <h3>هوية بصرية</h3>
-          <p>
-            اختيار ألوان، خطوط، واستخدامات بصرية تخلي البراند ثابت ومتناسق في كل مكان.
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-number">
+              <i class="fa-solid fa-pen-nib"></i>
+            </div>
+            <h3 data-i18n="homeCard1Title">تصميم شعارات</h3>
+            <p data-i18n="homeCard1Text">شعارات واضحة وحديثة مناسبة للاستخدام الرقمي والطباعة.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <h3 data-i18n="homeCard2Title">هوية بصرية</h3>
+            <p data-i18n="homeCard2Text">ألوان وخطوط ونظام بصري يساعد البراند يكون متناسق وسهل التمييز.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <h3 data-i18n="homeCard3Title">سوشيال ميديا</h3>
+            <p data-i18n="homeCard3Text">بوستات وحملات بتكوين قوي ووضوح يخدم المحتوى بشكل أفضل.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-exp">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="expTitle">خبرتي</h2>
+          <p data-i18n="expText">
+            أعمل على تطوير أفكار بصرية واضحة ومؤثرة، مع اهتمام بالتفاصيل، الترتيب، والإخراج النهائي بشكل احترافي.
           </p>
         </div>
 
-        <div class="card">
-          <div class="icon">▣</div>
-          <h3>تصميمات سوشيال ميديا</h3>
-          <p>
-            بوستات وإعلانات بتقسيمات مريحة للعين وتفاصيل تساعد المحتوى يبان بشكل أقوى.
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-number">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+            <h3 data-i18n="expCard1Title">تجربة بصرية قوية</h3>
+            <p data-i18n="expCard1Text">
+              أركز على التكوين، الألوان، والمسافات لإخراج تصميم يلفت النظر ويخدم الرسالة بوضوح.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <h3 data-i18n="expCard2Title">حلول مناسبة للمنصات</h3>
+            <p data-i18n="expCard2Text">
+              سواء كان المشروع للسوشيال ميديا، براند شخصي، أو شركة، أراعي أن يكون التصميم مناسبًا للاستخدام الفعلي.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="aiTitle">كيف أستخدم الـ AI</h2>
+          <p data-i18n="aiText">
+            أستخدم أدوات الذكاء الاصطناعي لتسريع البحث، توليد الأفكار، وتحسين المخرجات، مع الحفاظ على اللمسة الإبداعية البشرية في القرار النهائي.
           </p>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="work">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <h2>نماذج أعمال</h2>
-        </div>
-        <p>
-          دي أماكن مبدئية تعرض فيها شغلك. بعدين تقدر تستبدل كل كارت بصورة حقيقية من أعمالك.
-        </p>
-      </div>
-
-      <div class="work-grid">
-        <div class="card work-card">
-          <div class="work-cover">Logo Project</div>
-          <div class="work-content">
-            <h3>هوية لشركة ناشئة</h3>
-            <p>تصميم شعار وهوية مختصرة بشكل مودرن ومرن للاستخدام الرقمي والطباعة.</p>
-            <div class="chip-wrap">
-              <span class="chip">Logo</span>
-              <span class="chip">Branding</span>
-              <span class="chip">Minimal</span>
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-number">
+              <i class="fa-solid fa-bolt"></i>
             </div>
+            <h3 data-i18n="aiCard1Title">توليد أفكار أسرع</h3>
+            <p data-i18n="aiCard1Text">
+              أستخدم الـ AI في استكشاف الاتجاهات البصرية وتوسيع مساحة الأفكار في بداية المشروع.
+            </p>
           </div>
-        </div>
 
-        <div class="card work-card">
-          <div class="work-cover">Social Campaign</div>
-          <div class="work-content">
-            <h3>حملة سوشيال ميديا</h3>
-            <p>تصميم بوستات إعلانية متناسقة بصريًا بهدف إبراز العرض وجذب الانتباه بسرعة.</p>
-            <div class="chip-wrap">
-              <span class="chip">Posts</span>
-              <span class="chip">Ads</span>
-              <span class="chip">Campaign</span>
+          <div class="card">
+            <div class="card-number">
+              <i class="fa-solid fa-gears"></i>
             </div>
+            <h3 data-i18n="aiCard2Title">تحسين Workflow</h3>
+            <p data-i18n="aiCard2Text">
+              يساعدني على تسريع بعض المراحل مثل البحث، كتابة البرومبت، وتطوير النسخ الأولى بسرعة أكبر.
+            </p>
           </div>
-        </div>
 
-        <div class="card work-card">
-          <div class="work-cover">Visual Identity</div>
-          <div class="work-content">
-            <h3>بناء ستايل بصري</h3>
-            <p>اختيار ألوان وخطوط وعناصر تصميم تساعد البراند يظهر بشكل متسق واحترافي.</p>
-            <div class="chip-wrap">
-              <span class="chip">Identity</span>
-              <span class="chip">Color System</span>
-              <span class="chip">Style Guide</span>
+          <div class="card">
+            <div class="card-number">
+              <i class="fa-solid fa-brain"></i>
             </div>
+            <h3 data-i18n="aiCard3Title">التحكم الإبداعي النهائي</h3>
+            <p data-i18n="aiCard3Text">
+              أتعامل مع الذكاء الاصطناعي كأداة دعم، بينما يظل القرار البصري النهائي قائمًا على الذوق والخبرة.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <div class="container">
-      <div class="section-head">
+    <footer class="site-footer">
+      <div class="container footer-inner">
         <div>
-          <h2>طريقة العمل</h2>
-        </div>
-        <p>
-          شغل واضح من أول الكلام لحد التسليم، عشان المشروع يطلع منظم وسلس.
-        </p>
-      </div>
-
-      <div class="steps-grid">
-        <div class="card">
-          <div class="icon">1</div>
-          <h3>نفهم المطلوب</h3>
-          <p>نحدد نوع الشغل، الأسلوب المطلوب، والجمهور المستهدف عشان التصميم يطلع مناسب فعلًا.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">2</div>
-          <h3>نجهز الاتجاه البصري</h3>
-          <p>نشتغل على الشكل العام، الألوان، والترتيب لحد ما يبقى فيه أساس بصري قوي وواضح.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">3</div>
-          <h3>التنفيذ والتسليم</h3>
-          <p>تنفيذ التصميم بشكل نهائي مع إخراج مرتب يليق بالعرض أو النشر أو الاستخدام التجاري.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="container about">
-      <div class="about-visual">
-        <div>
-          <strong>داسكيدا</strong>
-          <span>Graphic Designer with a clean, modern visual style.</span>
-        </div>
-      </div>
-
-      <div class="card about-box">
-        <div class="section-head" style="margin-bottom: 8px;">
-          <div>
-            <h2>عنّي</h2>
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="Daskeda Logo">
           </div>
+          <div class="footer-note" data-i18n="footerNote">مصمم جرافيك إبداعي</div>
         </div>
 
-        <p style="color: var(--muted); margin-top: 0;">
-          أركز على التصميمات النظيفة، العصرية، والمتوازنة بصريًا. هدفي إن الشغل يبقى جذاب،
-          واضح، ويخدم الفكرة من غير زحمة أو عناصر زيادة.
-        </p>
-
-        <div class="about-list">
-          <div>تصميمات مناسبة للبراندات الشخصية والتجارية.</div>
-          <div>اهتمام بالتفاصيل، المسافات، والألوان الهادية المنظمة.</div>
-          <div>قابلية تطوير الموقع لاحقًا وإضافة أعمالك الحقيقية بسهولة.</div>
+        <div class="footer-contact">
+          <span>Email: yourmail@example.com</span>
+          <span>Instagram / Behance: @daskeda</span>
+          <span>WhatsApp: +966 5X XXX XXXX</span>
         </div>
       </div>
-    </div>
-  </section>
+    </footer>
+  </div>
 
-  <section>
-    <div class="container">
-      <div class="cta">
-        <div>
-          <h3>جاهز تعرض شغلك بشكل أقوى؟</h3>
-          <p>ابدأ بصفحة بسيطة ومرتبة، وبعدها نضيف الأعمال الحقيقية وروابط التواصل.</p>
-        </div>
-
-        <a href="#contact" class="btn btn-primary">يلا نبدأ</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <h2>تواصل</h2>
-        </div>
-        <p>
-          عدّل البيانات دي براحتك بعدين. حاليًا حطيتلك أماكن جاهزة فقط.
-        </p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-item">
-          <small>واتساب</small>
-          <strong>+966 5X XXX XXXX</strong>
-        </div>
-
-        <div class="contact-item">
-          <small>البريد الإلكتروني</small>
-          <strong>yourmail@example.com</strong>
-        </div>
-
-        <div class="contact-item">
-          <small>إنستجرام / بيهانس</small>
-          <strong>@daskeda</strong>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    © 2026 داسكيدا — All Rights Reserved
-  </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
