@@ -36,24 +36,68 @@ const translations = {
     aiCard3Text: "أتعامل مع الذكاء الاصطناعي كأداة دعم، بينما يظل القرار البصري النهائي قائمًا على الذوق والخبرة.",
 
     processTitle: "طريقة العمل",
-    processText: "أبدأ بفهم الفكرة والهدف من المشروع، ثم أبحث عن الاتجاه البصري المناسب، وبعدها أنتقل للتنفيذ والتطوير حتى أصل لنتيجة قوية، متوازنة، وجاهزة للعرض أو الاستخدام.",
+    processDesc: "خطوات واضحة ومترابطة للوصول من الفكرة الأولية إلى نتيجة نهائية قوية.",
+    process1Title: "فهم الفكرة",
+    process1Text: "أبدأ بفهم الهدف والرسالة المطلوبة من المشروع.",
+    process2Title: "تحديد الاتجاه",
+    process2Text: "تحديد الاتجاه البصري المناسب حسب طبيعة البراند.",
+    process3Title: "التنفيذ والتطوير",
+    process3Text: "تنفيذ التصميم وتطويره للوصول لأفضل نتيجة.",
+    process4Title: "الإخراج النهائي",
+    process4Text: "تسليم شغل احترافي جاهز للاستخدام.",
 
-    aboutTitle: "عنّي",
-    aboutText: "أركّز على التباين القوي، التكوين النظيف، وإخراج بصري حديث يوضح الفكرة بسرعة.",
-    aboutCard1Title: "الأسلوب",
-    aboutCard1Text: "أحب التصميمات الواضحة، المرتبة، والجريئة بدون زحمة أو عناصر زيادة.",
-    aboutCard2Title: "ما الذي أقدمه",
-    aboutCard2Text: "تصميمات مناسبة للبراندات الشخصية والتجارية، مع اهتمام بالتفاصيل والتسلسل البصري.",
+    aboutKicker: "مصمم إبداعي",
+    aboutMainTitle: "أصنع حضورًا بصريًا\nيترك أثرًا واضحًا",
+    aboutMainText: "أنا مصمم أركز على بناء هوية بصرية حديثة، متوازنة، وقوية، تساعد البراندات والأشخاص على الظهور بشكل أكثر وضوحًا واحترافية من أول نظرة.",
+    aboutBtn1: "استكشف أعمالي",
+    aboutBtn2: "ابدأ مشروعك",
+
+    aboutMini1: "تركيز على بناء شخصية بصرية واضحة",
+    aboutMini2: "اتجاه بصري حديث ومتوازن",
+    aboutMini3: "استخدام ذكي للأدوات الإبداعية",
+
+    aboutFloatLabel: "مرتكز على",
+    aboutFloatTitle: "فكر بصري جريء وواضح",
+    aboutFloatText: "أسلوب بصري يوازن بين الجرأة، النظافة، والوضوح لإخراج شغل يلفت ويعيش.",
+
+    aboutStoryTitle: "نبذة احترافية",
+    aboutStoryText: "أعمل على تقديم حلول تصميم مدروسة تجمع بين الشكل القوي والرسالة الواضحة، مع اهتمام كبير بالتفاصيل، التكوين، والتجربة البصرية النهائية.",
+    aboutStoryCard1Title: "الأسلوب",
+    aboutStoryCard1Text: "أحب الاتجاهات البصرية النظيفة والجريئة، مع اهتمام بالتوازن، المسافات، والتسلسل الهرمي للعناصر.",
+    aboutStoryCard2Title: "الفكر",
+    aboutStoryCard2Text: "لا أتعامل مع التصميم كعنصر جمالي فقط، بل كأداة تعبير تساعد البراند يبان بشكل أذكى وأوضح.",
+    aboutStoryCard3Title: "النتيجة",
+    aboutStoryCard3Text: "هدفي النهائي هو إنتاج شغل احترافي، قابل للتطوير، ويعكس شخصية المشروع بشكل حقيقي.",
+    aboutMini1Title: "هوية",
+    aboutMini1Text: "تركيز على بناء شخصية بصرية واضحة",
+
+    aboutMini2Title: "رؤية",
+    aboutMini2Text: "اتجاه بصري حديث ومتوازن",
+
+    aboutMini3Title: "تطوير",
+    aboutMini3Text: "استخدام ذكي للأدوات الإبداعية",
+    aboutStrengthsTitle: "ما الذي يميز طريقتي؟",
+    aboutStrengthsText: "أركز على تقديم تصميم متماسك بصريًا، قوي في الانطباع، وسهل التفاعل معه عبر مختلف المنصات.",
+    aboutStrength1Title: "وضوح بصري",
+    aboutStrength1Text: "بناء تصميم واضح وسهل القراءة من أول نظرة.",
+    aboutStrength2Title: "اتجاه إبداعي",
+    aboutStrength2Text: "تحديد اتجاه بصري واضح يعكس شخصية المشروع.",
+    aboutStrength3Title: "اتساق الهوية",
+    aboutStrength3Text: "الحفاظ على انسجام الهوية في كل نقطة ظهور.",
+    aboutStrength4Title: "تطوير ذكي",
+    aboutStrength4Text: "استخدام الأدوات الذكية لتسريع الفكرة وتحسين الجودة.",
+
+    aboutCtaTitle: "هل تريد هويـــة تعكسك فعلاً؟",
+    aboutCtaText: "أقدر أساعدك في بناء حضور بصري احترافي يليق بمشروعك ويخلي رسالتك أوضح وأقوى.",
+    aboutCtaBtn1: "تواصل معي",
+    aboutCtaBtn2: "شاهد الأعمال",
 
     workTitle: "الأعمال",
     workText: "هنا يمكنك عرض مشاريعك بشكل مرتب، وبعدها تستبدل هذه البلوكات بصور أعمالك الحقيقية.",
-    work1Thumb: "هوية بصرية",
     work1Title: "مشروع هوية",
     work1Text: "تصميم متكامل يساعد البراند يظهر بشكل واضح وحديث.",
-    work2Thumb: "سوشيال ميديا",
     work2Title: "حملة سوشيال",
     work2Text: "بوستات مرتبة بصريًا مع تكوين واضح وجذاب.",
-    work3Thumb: "تكوين إبداعي",
     work3Title: "عرض بصري",
     work3Text: "تقديم بصري مناسب للبورتفوليو والحملات والمشاريع الخاصة.",
     work4Title: "إعلان إبداعي",
@@ -64,9 +108,7 @@ const translations = {
     work6Text: "معالجة بصرية حديثة للمحتوى مع ترتيب واضح للعناصر.",
 
     contactTitle: "تواصل",
-    contactText: "يمكنك تعديل البيانات دي ووضع وسيلة التواصل الحقيقية الخاصة بك.",
-
-    footerNote: "مصمم جرافيك إبداعي"
+    contactText: "يمكنك تعديل البيانات دي ووضع وسيلة التواصل الحقيقية الخاصة بك."
   },
 
   en: {
@@ -106,24 +148,71 @@ const translations = {
     aiCard3Text: "I treat AI as a support tool, while final visual decisions remain based on design taste and experience.",
 
     processTitle: "Process",
-    processText: "I start by understanding the project goal, then explore the right visual direction, and move into execution and refinement until the final result feels strong, balanced, and ready to present or use.",
+    processDesc: "Clear and structured steps to turn ideas into strong final results.",
+    process1Title: "Understanding the Idea",
+    process1Text: "I start by understanding the goal and message of the project.",
+    process2Title: "Defining Direction",
+    process2Text: "Setting the right visual direction based on the brand.",
+    process3Title: "Execution & Development",
+    process3Text: "Designing and refining to achieve the best result.",
+    process4Title: "Final Output",
+    process4Text: "Delivering a polished and ready-to-use design.",
 
-    aboutTitle: "About",
-    aboutText: "I focus on strong contrast, clean composition, and a modern visual output that communicates quickly.",
-    aboutCard1Title: "Style",
-    aboutCard1Text: "I like visuals that feel clear, organized, and bold without unnecessary clutter.",
-    aboutCard2Title: "What I Offer",
-    aboutCard2Text: "Design solutions for personal and commercial brands with strong attention to detail and visual hierarchy.",
+    aboutKicker: "Creative Designer",
+    aboutMainTitle: "I Create Visual Presence\nThat Leaves a Clear Impact",
+    aboutMainText: "I am a designer focused on building modern, balanced, and strong visual identities that help brands and individuals appear more professional and memorable at first glance.",
+    aboutBtn1: "Explore My Work",
+    aboutBtn2: "Start Your Project",
+
+    aboutMini1: "Focus on building a clear visual identity",
+    aboutMini2: "Modern and balanced visual direction",
+    aboutMini3: "Smart use of creative tools",
+
+    aboutFloatLabel: "Based On",
+    aboutFloatTitle: "Bold and Clear Visual Thinking",
+    aboutFloatText: "A visual style that balances boldness, cleanliness, and clarity to create work that stands out and lasts.",
+
+    aboutStoryTitle: "Professional Overview",
+    aboutStoryText: "I create well-considered design solutions that combine strong visuals with clear communication, with great attention to detail, composition, and the final visual experience.",
+    aboutStoryCard1Title: "Style",
+    aboutStoryCard1Text: "I prefer clean and bold visual directions, with strong attention to balance, spacing, and hierarchy.",
+    aboutStoryCard2Title: "Thinking",
+    aboutStoryCard2Text: "I do not treat design as decoration only, but as a communication tool that helps a brand appear smarter and clearer.",
+    aboutStoryCard3Title: "Result",
+    aboutStoryCard3Text: "My goal is to create professional, scalable work that genuinely reflects the personality of the project.",
+
+    aboutStrengthsTitle: "What Defines My Approach?",
+    aboutStrengthsText: "I focus on creating visually cohesive design that leaves a strong impression and works smoothly across platforms.",
+    aboutStrength1Title: "Visual Clarity",
+    aboutStrength1Text: "Building visuals that are clear and easy to read at first glance.",
+    aboutStrength2Title: "Creative Direction",
+    aboutStrength2Text: "Defining a visual direction that reflects the brand personality.",
+    aboutStrength3Title: "Brand Consistency",
+    aboutStrength3Text: "Maintaining a consistent identity across every touchpoint.",
+    aboutStrength4Title: "Smart Development",
+    aboutStrength4Text: "Using smart tools to speed up the idea and improve quality.",
+
+    aboutMini1Title: "Identity",
+    aboutMini1Text: "Focus on building a clear visual identity",
+
+    aboutMini2Title: "Vision",
+    aboutMini2Text: "Modern and balanced visual direction",
+
+    aboutMini3Title: "Development",
+    aboutMini3Text: "Smart use of creative tools",
+
+
+    aboutCtaTitle: "Want a identity that truly reflect you?",
+    aboutCtaText: "I can help you build a professional visual presence that fits your project and makes your message stronger and clearer.",
+    aboutCtaBtn1: "Contact Me",
+    aboutCtaBtn2: "View Work",
 
     workTitle: "Work",
     workText: "You can showcase your projects here in a clean way, then replace these blocks with your real portfolio images.",
-    work1Thumb: "Brand Identity",
     work1Title: "Identity Project",
     work1Text: "A complete design system that helps the brand appear clear and modern.",
-    work2Thumb: "Social Media",
     work2Title: "Social Campaign",
     work2Text: "Well-structured posts with a strong and attractive composition.",
-    work3Thumb: "Creative Layout",
     work3Title: "Visual Presentation",
     work3Text: "A visual presentation suitable for portfolios, campaigns, and special projects.",
     work4Title: "Creative Ad",
@@ -134,9 +223,7 @@ const translations = {
     work6Text: "A modern visual treatment for content with clear arrangement of elements.",
 
     contactTitle: "Contact",
-    contactText: "You can update these details later with your real contact information.",
-
-    footerNote: "Creative Graphic Designer"
+    contactText: "You can update these details later with your real contact information."
   }
 };
 
@@ -150,7 +237,12 @@ function applyTranslations(lang) {
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     if (translations[lang] && translations[lang][key]) {
-      el.textContent = translations[lang][key];
+      const value = translations[lang][key];
+      if (value.includes("\n")) {
+        el.innerHTML = value.replace(/\n/g, "<br>");
+      } else {
+        el.textContent = value;
+      }
     }
   });
 }
@@ -182,15 +274,4 @@ document.addEventListener("DOMContentLoaded", () => {
       applyLanguage(newLang);
     });
   }
-
-  document.querySelectorAll(".section").forEach((section) => {
-    section.addEventListener("mousemove", (e) => {
-      const rect = section.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      section.style.setProperty("--mouse-x", `${x}px`);
-      section.style.setProperty("--mouse-y", `${y}px`);
-    });
-  });
 });
